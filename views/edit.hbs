@@ -1,0 +1,36 @@
+<h1>Редактировать курс</h1>
+<form action='/products/edit/' method='POST'>
+  <div class='mb-3'>
+    <label for='exampleFormControlInput1' class='form-label'>Название продукта</label>
+    <input
+      type='text'
+      class='form-control'
+      id='exampleFormControlInput1'
+      name='name'
+      value='{{course.title}}'
+    />
+  </div>
+  <div class='mb-3'>
+    <label for='exampleFormControlInput1' class='form-label'>Цена</label>
+    <input
+      type='text'
+      class='form-control'
+      id='exampleFormControlInput1'
+      name='price'
+      value='{{course.price}}'
+    />
+  </div>
+  <div class='mb-3'>
+    <label for='exampleFormControlInput1' class='form-label'>Ссылка</label>
+    <input
+      type='text'
+      class='form-control'
+      id='exampleFormControlInput1'
+      name='link'
+      value='{{course.img}}'
+    />
+  </div>
+  <input type='hidden' name='id' value='{{course.id}}' />
+
+  <button type='submit' class='btn btn-primary'>Сохранить</button>
+</form>

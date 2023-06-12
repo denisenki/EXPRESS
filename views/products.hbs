@@ -1,0 +1,22 @@
+<h1>Продукты</h1>
+<div class='row'>
+  {{#if courses.length}}
+    {{#each courses}}
+      <div class='col'>
+        <div class='card' style='width: 18rem;'>
+          <img src='{{img}}' class='card-img-top' alt='...' />
+          <div class='card-body'>
+            <h5 class='card-title'>{{title}}</h5>
+            <p class='card-text'>
+              {{price}}
+            </p>
+            <a href='/products/{{id}}' class='btn btn-primary'>Подробнее</a>
+             <a href='/products/{{id}}/edit?allow=true' class='btn btn-primary'>Редактировать</a>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  {{else}}
+    <p>Курсы отсутствуют</p>
+  {{/if}}
+</div>
